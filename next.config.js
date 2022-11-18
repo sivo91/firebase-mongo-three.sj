@@ -11,7 +11,7 @@ module.exports = {
     async rewrites() {
         return [
           {
-            source: '/users',
+            source: '/api/users',
             destination: 'https://firebase-mongo-three.vercel.app/posts',
           },
         ]
