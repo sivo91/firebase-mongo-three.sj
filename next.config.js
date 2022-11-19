@@ -4,6 +4,7 @@ const { default: next } = require('next');
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  
 }
 
 module.exports = nextConfig
@@ -21,12 +22,11 @@ module.exports = nextConfig
   }; */
 
 
-  module.exports = {
+ module.exports = {
   async headers() {
     return [
       {
-        // matching all API routes
-        source: "/api/users",
+        source: "/api/users/.*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
