@@ -8,16 +8,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
-//next.config.js
- module.exports = {
-    async rewrites() {
-        return [
-          {
-            source: '/',
-            destination: 'https://firebase-mongo-three.vercel.app/posts',
-          },
-        ]
-      },
-  }; 
-
