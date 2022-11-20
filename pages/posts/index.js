@@ -219,7 +219,7 @@ useEffect(() => {
                          Update
                       </MenuItem>
 
-                      <MenuItem onClick={()=> deleteUser(user._id)} 
+                      <MenuItem crossorigin="anonymous" onClick={()=> deleteUser(user._id)} 
                         icon={<FaMarker />} command='⌘N'>
                          Delete
                       </MenuItem>
