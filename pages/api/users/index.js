@@ -1,7 +1,7 @@
 
 import connectDB from "../../../utils/connectDB"
 import Data from '../../../models/Data'
-import nc from 'next-connect'
+//import nc from 'next-connect'
 
 
 connectDB()
@@ -30,9 +30,6 @@ connectDB()
 export default handler */
 
 
-if(!process.env.MONGO) {
-  throw new Error('please add your MONGO_URI to env.local')
-}
 
 
 export default async function handler(req, res) {

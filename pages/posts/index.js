@@ -29,6 +29,7 @@ import api from '../../utils/config'
 import {  FaMarker,FaAlignJustify } from "react-icons/fa";
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { preProcessFile } from 'typescript';
 
 
 
@@ -83,10 +84,11 @@ useEffect(() => {
     console.log(docId)
   
     try {
+    
       await api.delete(`/users/${docId}`);
        console.log('success')
     } catch (error) {
-       console.log(error)
+       console.log(error.response)
     }
   }
 

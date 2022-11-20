@@ -5,21 +5,27 @@ const { default: next } = require('next');
  const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
+          {
+            key: "Cross-Origin-Embedder-Policy",
+            value: "require-corp",
+          }
+        ]
+      }
+    ]
+  }
   
   
 }
 
 module.exports = nextConfig 
 
-// next.config.js
-module.exports = {
-    async rewrites() {
-        return [
-          {
-            source: '/api/:path*',
-            destination: 'https://firebase-mongo-three.vercel.app/:path*',
-          },
-        ]
-      },
-  };
- 
