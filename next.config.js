@@ -3,8 +3,8 @@ const { default: next } = require('next');
 /** @type {import('next').NextConfig} */
 
  const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+/*   reactStrictMode: true,
+  swcMinify: true, */
 
   async headers() {
     return [
