@@ -4,8 +4,6 @@ const connectMongo = async () => mongoose.connect(process.env.MONGO)
 export default connectMongo */
 
 
-
-/* 
 import mongoose from "mongoose";
 
 const connection = {};
@@ -23,9 +21,9 @@ async function connectMongo() {
 }
 
 export default connectMongo;
- */
+ 
 
-
+/* 
 const mongoose = require('mongoose')
 
 async function connectDB() {
@@ -44,5 +42,5 @@ async function connectDB() {
 
 export default connectDB
 
-
+ */
 
