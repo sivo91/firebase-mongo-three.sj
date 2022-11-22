@@ -11,7 +11,7 @@ const api  = axios.create({
         { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
    
   ],
-  baseURL: "http://localhost:3000/api/",
+  baseURL: process.env.MONGO || "http://localhost:3000/api/",
 });
 
 export default api ;

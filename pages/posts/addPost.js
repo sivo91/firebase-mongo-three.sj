@@ -94,7 +94,7 @@ const createUser = async () => {
                <Center>
                   <Button mt={6} w={200}
                         onClick={createUser}
-                        crossorigin="anonymous"
+                        crossOrigin="anonymous"
                         disabled={car.length < 1 || 
                                   model.length < 1 || 
                                   color.length < 1}
