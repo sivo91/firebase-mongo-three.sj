@@ -1,11 +1,12 @@
 const { default: next } = require('next');
 
-/** @type {import('next').NextConfig} */
+// @type {import('next').NextConfig} 
 
- const nextConfig = {
-/*   reactStrictMode: true,
-  swcMinify: true, */
 
+
+
+// next.config.js
+module.exports = {
   async headers() {
     return [
       {
@@ -20,10 +21,5 @@ const { default: next } = require('next');
       }
     ]
   }
-  
-  
-}
-
-module.exports = nextConfig 
-
+};
 
